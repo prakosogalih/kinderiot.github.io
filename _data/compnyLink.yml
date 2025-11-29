@@ -1,0 +1,12 @@
+- name: About Us
+  url: /about
+- name: Our Team
+  url: /our-team
+- name: Careers
+  url: /careers
+- name: Partners
+  url: /partners
+- name: Press Kit
+  url: /press-kit
+- name: Contact
+  url: /contact

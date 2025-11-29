@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page.title | default: site.title }}</title>
+    <link rel="stylesheet" href="{{ " /assets/css/main.css" | relative_url }}">
+    <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
+</head>
+
+<body>
+    <!-- Navbar -->
+    {% include navbarPage.html %}
+
+    <!-- Page Content -->
+    <section class="section has-background-black-ter"
+        style="min-height: 60vh; padding-top: 3rem; padding-bottom: 3rem;">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-10-tablet is-8-desktop">
+                    <!-- Page Header -->
+                    <div class="box has-background-dark" style="border-left: 4px solid #00d1b2; margin-bottom: 2rem;">
+                        <h1 class="title is-2 has-text-white mb-2">{{ page.title }}</h1>
+                        <p class="has-text-grey-light is-size-6">
+                            <span class="icon is-small">
+                                <i class="fas fa-book-open"></i>
+                            </span>
+                            <span>Global</span>
+                        </p>
+                    </div>
+
+                    <!-- Page Content -->
+                    <div class="box has-background-dark has-text-white-ter content" style="line-height: 1.8;">
+                        {{ content }}
+                    </div>
+                </div>
+                <div class="column is-2-tablet is-4-desktop">
+                    <div class="box has-background-dark has-text-white-ter content" style="line-height: 1.8;">
+                        <h3 class="title is-5 has-text-white mb-4">Filters</h3>
+
+                        <!-- Categories -->
+                        <div class="mb-5">
+                            <p class="menu-label has-text-grey-light mb-2">Categories</p>
+                            <div class="field">
+                                {% for category in site.categories %}
+                                <div class="control mb-1">
+                                    <label class="checkbox has-text-grey-light hover-text-white">
+                                        <input type="checkbox" class="filter-checkbox mr-2" data-type="category"
+                                            value="{{ category[0] }}">
+                                        {{ category[0] | capitalize }}
+                                        <span class="tag is-dark is-rounded is-small ml-1"
+                                            style="background-color: rgba(255,255,255,0.1);">{{ category[1].size
+                                            }}</span>
+                                    </label>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+
+                        <!-- Tags -->
+                        <div>
+                            <p class="menu-label has-text-grey-light mb-2">Tags</p>
+                            <div class="field">
+                                {% for tag in site.tags %}
+                                <div class="control mb-1">
+                                    <label class="checkbox has-text-grey-light hover-text-white">
+                                        <input type="checkbox" class="filter-checkbox mr-2" data-type="tag"
+                                            value="{{ tag[0] }}">
+                                        {{ tag[0] | capitalize }}
+                                        <span class="tag is-dark is-rounded is-small ml-1"
+                                            style="background-color: rgba(255,255,255,0.1);">{{ tag[1].size }}</span>
+                                    </label>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    {% include footer.html %}
+    <script src="{{ " /assets/js/main.js" | relative_url }}"></script>
+</body>
+
+</html>

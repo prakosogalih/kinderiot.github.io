@@ -1,0 +1,120 @@
+<footer class="footer has-background-black-bis" style="padding: 3rem 1.5rem 2rem;">
+    <div class="container">
+        <div class="columns">
+            <!-- Brand Column -->
+            <div class="column is-4">
+                <div class="content">
+                    <div class="mb-4" style="display: flex; align-items: center; gap: 0.75rem;">
+                        <span class="icon is-large has-text-primary">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"
+                                    fill="currentColor"></path>
+                            </svg>
+                        </span>
+                        <span class="is-size-4 has-text-weight-bold has-text-white">KinderIoT</span>
+                    </div>
+                    <p class="has-text-grey-light" style="line-height: 1.6;">
+                        Platform IoT terdepan untuk otomasi industri. Menghubungkan mesin, sensor, dan sistem untuk
+                        meningkatkan efisiensi produksi dan mendukung transformasi Industry 4.0.
+                    </p>
+                    <div class="mt-3">
+                        <p class="has-text-grey-light is-size-7">
+                            <span class="icon has-text-primary is-small">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </span>
+                            Kutoarjo, Indonesia
+                        </p>
+                    </div>
+
+                    <div class="buttons mt-4">
+                        <a class="button is-small is-rounded"
+                            style="background-color: #1877f2; color: white; border: none;">
+                            <span class="icon is-small">
+                                <i class="fab fa-facebook-f"></i>
+                            </span>
+                        </a>
+                        <a class="button is-small is-rounded"
+                            style="background-color: #1da1f2; color: white; border: none;">
+                            <span class="icon is-small">
+                                <i class="fab fa-twitter"></i>
+                            </span>
+                        </a>
+                        <a class="button is-small is-rounded"
+                            style="background-color: #0a66c2; color: white; border: none;">
+                            <span class="icon is-small">
+                                <i class="fab fa-linkedin-in"></i>
+                            </span>
+                        </a>
+                        <a class="button is-small is-rounded"
+                            style="background-color: #333; color: white; border: none;">
+                            <span class="icon is-small">
+                                <i class="fab fa-github"></i>
+                            </span>
+                        </a>
+                        <a class="button is-small is-rounded"
+                            style="background-color: #ff0000; color: white; border: none;">
+                            <span class="icon is-small">
+                                <i class="fab fa-youtube"></i>
+                            </span>
+                        </a>
+                    </div>
+
+                    <!-- Status Badge -->
+                    <div class="mt-4">
+                        <span class="tag is-success is-light">
+                            <span class="icon is-small">
+                                <i class="fas fa-circle" style="font-size: 0.5rem;"></i>
+                            </span>
+                            <span>All Systems Operational</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Company Column -->
+            <div class="column is-2 is-offset-1">
+                <p class="has-text-weight-bold has-text-white mb-3">COMPANY</p>
+                <ul style="list-style: none; padding: 0;">
+                    {% for link in site.data.compnyLink %}
+                    <li class="mb-2">
+                        <a href="{{ link.url }}" class="has-text-grey-light footer-link">{{ link.name }}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <!-- Solutions Column -->
+            <div class="column is-2">
+                <p class="has-text-weight-bold has-text-white mb-3">SOLUTIONS</p>
+                <ul style="list-style: none; padding: 0;">
+                    {% for link in site.data.solusionsLink %}
+                    <li class="mb-2">
+                        <a href="{{ link.url }}" class="has-text-grey-light footer-link">{{ link.name }}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <!-- Resources Column -->
+            <div class="column is-2">
+                <p class="has-text-weight-bold has-text-white mb-3">RESOURCES</p>
+                <ul style="list-style: none; padding: 0;">
+                    {% for link in site.data.resourcesLink %}
+                    <li class="mb-2">
+                        <a href="{{ link.url }}" class="has-text-grey-light footer-link">{{ link.name }}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <hr style="background-color: rgba(255, 255, 255, 0.1); margin: 2rem 0 1rem;">
+        <div class="has-text-centered">
+            <p class="has-text-grey is-size-7">
+                Created with love by Masgal © 2025 KinderIoT. All Rights Reserved. | Powered by Industry 4.0 Technology
+            </p>
+        </div>
+    </div>
+</footer>

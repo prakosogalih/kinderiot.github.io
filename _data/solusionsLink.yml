@@ -1,0 +1,10 @@
+- name: PLC Systems
+  url: /plc-systems
+- name: SCADA
+  url: /scada
+- name: IoT Sensors
+  url: /iot-sensors
+- name: Data Analytics
+  url: /data-analytics
+- name: Cloud Platform
+  url: /cloud-platform
