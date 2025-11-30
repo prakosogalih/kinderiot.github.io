@@ -1,6 +1,3 @@
----
----
-
 @charset "UTF-8";
 /*! bulma.io v1.0.4 | MIT License | github.com/jgthms/bulma */
 /* Bulma Utilities */
@@ -21565,3 +21562,232 @@ has-background-danger.is-hoverable:active {
 }
 
 /*# sourceMappingURL=bulma.css.map */
+/* Orbit Animation */
+.orbit-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    z-index: 0;
+    animation: orbit-spin 60s linear infinite;
+}
+
+/* Orbit Path Rings */
+.orbit-path {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    border: 2px dashed rgba(255, 255, 255, 0.15);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.orbit-path-1 {
+    width: 400px;
+    height: 400px;
+    margin-left: -200px;
+    margin-top: -200px;
+}
+
+.orbit-path-2 {
+    width: 600px;
+    height: 600px;
+    margin-left: -300px;
+    margin-top: -300px;
+}
+
+.orbit-path-3 {
+    width: 800px;
+    height: 800px;
+    margin-left: -400px;
+    margin-top: -400px;
+}
+
+.orbit-path-4 {
+    width: 1000px;
+    height: 1000px;
+    margin-left: -500px;
+    margin-top: -500px;
+}
+
+.orbit-item {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: orbit-counter-spin 60s linear infinite;
+    white-space: nowrap;
+}
+
+@keyframes orbit-spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes orbit-counter-spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+/* Ensure hero content is above orbit items */
+.hero-content-wrapper {
+    position: relative;
+    z-index: 1;
+}
+
+/* Enhanced Navbar Styles */
+.navbar.is-transparent {
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar-item {
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.navbar-item:hover {
+    background-color: rgba(0, 209, 178, 0.1) !important;
+    color: #00d1b2 !important;
+}
+
+.navbar-item svg {
+    transition: transform 0.3s ease;
+}
+
+.navbar-item:hover svg {
+    transform: translateY(-2px);
+}
+
+.navbar-item.is-active {
+    color: #00d1b2 !important;
+    background-color: rgba(0, 209, 178, 0.15) !important;
+}
+
+.navbar-item.is-active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #00d1b2, transparent);
+}
+
+.button.is-primary {
+    transition: all 0.3s ease;
+}
+
+.button.is-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 209, 178, 0.5) !important;
+}
+
+/* Footer Styles */
+.footer-link {
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.footer-link:hover {
+    color: #00d1b2 !important;
+    transform: translateX(5px);
+}
+
+.footer .buttons .button {
+    transition: all 0.3s ease;
+}
+
+.footer .buttons .button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Page Content Styling */
+.content.has-text-white-ter h2 {
+    color: #00d1b2 !important;
+    border-bottom: 2px solid rgba(0, 209, 178, 0.3);
+    padding-bottom: 0.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.content.has-text-white-ter h3 {
+    color: #48c774 !important;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.content.has-text-white-ter h4 {
+    color: #3298dc !important;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.content.has-text-white-ter p {
+    margin-bottom: 1rem;
+    color: #dbdbdb;
+}
+
+.content.has-text-white-ter ul,
+.content.has-text-white-ter ol {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+.content.has-text-white-ter li {
+    margin-bottom: 0.5rem;
+    color: #dbdbdb;
+}
+
+.content.has-text-white-ter a {
+    color: #00d1b2;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.content.has-text-white-ter a:hover {
+    color: #48c774;
+}
+
+.content.has-text-white-ter strong {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.content.has-text-white-ter em {
+    color: #b5b5b5;
+}
+
+.content.has-text-white-ter code {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #00d1b2;
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+}
+
+.content.has-text-white-ter blockquote {
+    background-color: rgba(0, 209, 178, 0.1);
+    border-left: 4px solid #00d1b2;
+    padding: 1rem 1.5rem;
+    margin: 1rem 0;
+}
+
+.content.has-text-white-ter hr {
+    background-color: rgba(255, 255, 255, 0.1);
+    margin: 2rem 0;
+}
