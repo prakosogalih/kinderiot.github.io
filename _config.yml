@@ -24,7 +24,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Platform IoT terdepan untuk otomasi industri. Menghubungkan mesin, sensor, dan sistem untuk
   meningkatkan efisiensi produksi dan mendukung transformasi Industry 4.0.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "/kinderiot.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: prakosogalih
 github_username:  prakosogalih
 
